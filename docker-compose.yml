@@ -1,0 +1,7 @@
+version: '3'
+services:
+  dbdiff:
+    image: dbdiff:1.0
+    volumes:
+       - ./config:/DBDiff/config
+    command: ./dbdiff server1.db1:server2.db2 --config=./config/config.yaml
